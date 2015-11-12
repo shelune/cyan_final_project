@@ -1,0 +1,65 @@
+@import '../fonts/fonts.css';
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.jumbotron {
+    height: 100vh;
+    background-image: url('../img/bg-brick.jpg');
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    position: relative;
+}
+
+.container__explore {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+}
+
+.container__explore p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'BeonMedium', sans-serif;
+    color: aqua;
+    text-shadow: 4px 4px 7px rgba(96, 0, 255, 0.6);
+    font-size: 3em;
+    position: relative;
+}
+
+.container__explore p::after {
+    position: absolute;
+    content: 'EXPLORE';
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    text-shadow: -4px -2px 7px rgba(96, 0, 255, 0.6)
+}
+
+.container__explore::after {
+    content: '';
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    -webkit-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    transform: translateX(-25%);
+    height: 100%;
+    width: 100px;
+    background: url(../img/arrow.png) no-repeat;
+    margin-top: -7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
