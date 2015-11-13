@@ -4,22 +4,80 @@
    Author's custom styles
    ========================================================================== */
 
-.jumbotron {
-    height: 100vh;
-    background-image: url('../img/bg-brick.jpg');
-    background-repeat: repeat-x;
-    background-position: bottom center;
-    position: relative;
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
 }
 
-.container__explore {
+/*
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* These selection rule sets have to be separate.
+* Customize the background color to match your design.
+*/
+
+::-moz-selection {
+    background: #93f0ac;
+    text-shadow: none;
+}
+
+::selection {
+    background: #93f0ac;
+    text-shadow: none;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+* Reset list style and bullets
+*/
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.jumbotron {
+    height: 100vh;
+    background-image: url('../img/br-brick.png');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.main__hero {
+    background: url(../img/3r-main.png) center;
+    background-size: cover;
+    min-height: 12.5em;
+    height: 37.5em;
+    border: 0;
+    mix-blend-mode: screen;
+}
+
+.main__explore {
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     left: 0;
     right: 0;
 }
 
-.container__explore p {
+.main__explore p {
     text-align: center;
     text-transform: uppercase;
     font-family: 'BeonMedium', sans-serif;
@@ -29,16 +87,16 @@
     position: relative;
 }
 
-.container__explore p::after {
+.main__explore p::after {
     position: absolute;
     content: 'EXPLORE';
     -webkit-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
-    text-shadow: -4px -2px 7px rgba(96, 0, 255, 0.6)
+    text-shadow: -4px -2px 7px rgba(96, 0, 255, 0.6);
 }
 
-.container__explore::after {
+.main__explore::after {
     content: '';
     position: absolute;
     margin: 0 auto;
@@ -52,13 +110,38 @@
     margin-top: -7px;
 }
 
+nav.vertical {
+    position: fixed;
+    left: 0;
+    margin-left: 2em;
+    z-index: 5;
+}
 
+.nav-bar {
+    text-transform: uppercase;
+    font-family: 'BeonMedium';
+}
 
+.nav-bar li {
+    margin: 1em;
+}
 
+.nav-bar a {
+    color: #fdaebd;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    -webkit-transition: text-shadow 0.2s 0s cubic-bezier(0.6, 0.4, 0.6, 1);
+    transition: text-shadow 0.2s 0s cubic-bezier(0.6, 0.4, 0.6, 1);
+}
 
+.nav-bar a:hover {
+    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 8px rgb(255, 0, 36), 0 0 10px rgb(255, 0, 36), 0 0 14px rgb(255, 0, 36);
+}
 
-
-
+.section-1 {
+    background-image: url('../img/br-brick.png');
+    background-size: cover;
+}
 
 
 
