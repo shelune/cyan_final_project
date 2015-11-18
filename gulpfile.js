@@ -6,8 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     autoprefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    browserSync = require('browser-sync'),
-    livereload = require('gulp-livereload');
+    browserSync = require('browser-sync').create();
+    // livereload = require('gulp-livereload');
 
 gulp.task('imagemin', function() {
     var imgSrc = './img/**/*',
@@ -47,6 +47,21 @@ gulp.task('styles', function() {
 gulp.task('fonts', function() {
     gulp.src('./fonts/**/*.{ttf, woff, eof, svg}')
         .pipe(gulp.dest('./build/fonts'));
+});
+
+gulp.task('browser-sync', function() {
+     var files = [
+      './**/*.html',
+      './css/**/*.css',
+      './img/**/*.png',
+      './js/**/*.js'
+   ];
+
+    browserSync.init(files, {
+        server: {
+            baseDir: "./"
+        }
+    });
 });
 
 
