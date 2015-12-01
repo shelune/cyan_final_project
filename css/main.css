@@ -154,11 +154,15 @@ nav.vertical {
 *
 */
 
-.section-1, .section-2, .section-3 {
+.sections {
     background: #000;
-    padding-top: 6em;
     clear: both;
     width: 100%;
+}
+
+.section {
+    margin: 6em 0 9em 0;
+    clear: both;
 }
 
 /********/
@@ -214,7 +218,7 @@ nav.vertical {
     font-size: 2em;
 }
 
-.section-1 .section-subtitle__content {
+.sections .section-subtitle__content {
     color: #bce1ff;
     font-family: 'Beon Medium', sans-serif;
     text-align: right;
@@ -240,6 +244,14 @@ nav.vertical {
     margin-top: 2em;
 }
 
+.section-2 .small-text {
+    float: left;
+}
+
+.section-2 .small-text:hover {
+    color: aqua;
+}
+
 .section-3 .section-content__placeholder {
     width: 100%;
 }
@@ -251,6 +263,45 @@ nav.vertical {
 .section-3 .section-subtitle {
     width: 100%;
     padding: 0;
+}
+
+/********/
+
+/*
+*
+* FOOTER
+*
+*/
+
+.main-footer {
+    background-image: url('../img/bg-brick.jpg');
+    padding: 2em 0;
+    text-align: center;
+}
+
+.main-footer .section-title {
+    font-size: 3em; 
+}
+
+.contact-info, .social-sites {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Beon Medium', sans-serif;
+    color: #fdaebd;
+    justify-content: space-around;
+    margin-bottom: 1.25em;
+}
+
+.social-sites a {
+    font-size: 2em;
+}
+
+.contact-info h4 {
+    font-size: 1em;
+}
+
+.contact-info em {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px rgba(255, 0, 36, 0.5), 0 0 8px rgba(255, 0, 36, 0.5), 0 0 11px rgba(255, 0, 36, 0.5);
 }
 
 /********/
