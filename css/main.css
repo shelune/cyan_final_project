@@ -117,12 +117,14 @@ ul {
 *
 */
 
-nav.vertical {
+.nav--vertical {
     position: fixed;
+    top: 50%;
     left: 0;
     margin-left: 2em;
     z-index: 5;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .nav-bar {
@@ -385,6 +387,10 @@ span.small-text {
 .fl-left { /* float left */
     float: left;
     position: relative;
+}
+
+.show {
+    visibility: visible;
 }
 
 /* MEDIA QUERIES */
