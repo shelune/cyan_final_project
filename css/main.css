@@ -120,6 +120,7 @@ ul {
 .nav--vertical {
     position: fixed;
     top: 50%;
+    transform: translateY(-50%);
     left: 0;
     margin-left: 2em;
     z-index: 5;
@@ -250,7 +251,12 @@ ul {
     float: left;
 }
 
-.section-2 .small-text:hover {
+.section-3 .small-text {
+    float: right;
+    margin-right: 2em;
+}
+
+.section-2 .small-text:hover, .section-3 .small-text:hover {
     color: aqua;
 }
 
