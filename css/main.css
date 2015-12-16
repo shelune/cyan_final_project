@@ -133,12 +133,15 @@ ul {
 *
 */
 
-nav.vertical {
+.nav--vertical {
     position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     margin-left: 2em;
     z-index: 5;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .nav-bar {
@@ -172,9 +175,13 @@ nav.vertical {
 
 .section {
     background: #000;
-    padding-top: 6em;
     clear: both;
     width: 100%;
+}
+
+.section {
+    margin: 6em 0 9em 0;
+    clear: both;
 }
 
 /********/
@@ -334,6 +341,45 @@ nav.vertical {
 
 /*
 *
+* FOOTER
+*
+*/
+
+.main-footer {
+    background-image: url('../img/bg-brick.jpg');
+    padding: 2em 0;
+    text-align: center;
+}
+
+.main-footer .section-title {
+    font-size: 3em; 
+}
+
+.contact-info, .social-sites {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Beon Medium', sans-serif;
+    color: #fdaebd;
+    justify-content: space-around;
+    margin-bottom: 1.25em;
+}
+
+.social-sites a {
+    font-size: 2em;
+}
+
+.contact-info h4 {
+    font-size: 1em;
+}
+
+.contact-info em {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px rgba(255, 0, 36, 0.5), 0 0 8px rgba(255, 0, 36, 0.5), 0 0 11px rgba(255, 0, 36, 0.5);
+}
+
+/********/
+
+/*
+*
 * CUSTOM CLASSES
 *
 */
@@ -443,6 +489,10 @@ span.small-text {
 .fl-left { /* float left */
     float: left;
     position: relative;
+}
+
+.show {
+    visibility: visible;
 }
 
 /* MEDIA QUERIES */
