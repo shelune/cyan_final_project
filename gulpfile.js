@@ -68,7 +68,6 @@ gulp.task('browser-sync', function() {
 gulp.task('default', ['imagemin', 'htmlpage', 'scripts', 'styles', 'fonts'], function() {
     gulp.watch('./*.html', function() {
         gulp.run('htmlpage');
-
     });
 
     gulp.watch('./css/*.css', function() {

@@ -53,6 +53,16 @@ ul {
     list-style: none;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+/* */
+
 .jumbotron {
     height: 100vh;
     background-image: url('../img/bg-brick.jpg');
@@ -154,7 +164,7 @@ nav.vertical {
 *
 */
 
-.section-1, .section-2, .section-3 {
+.section {
     background: #000;
     padding-top: 6em;
     clear: both;
@@ -172,7 +182,7 @@ nav.vertical {
 .section-title {
     font-family: 'Kabel', sans-serif;
     color: #00f6ff;
-    font-size: 6em;
+    font-size: 5em;
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.7), 0 0 7px rgba(96, 0, 255, 0.7), 0 0 10px rgba(96, 0, 255, 0.7);
     display: inline-block;
     margin-top: 0;
@@ -183,6 +193,10 @@ nav.vertical {
     margin-top: 4em;
 }
 
+.section-subtitle {
+    width: 100%;
+}
+
 .section-content__placeholder {
     width: 90%;
     min-height: 3em;
@@ -190,11 +204,6 @@ nav.vertical {
     background-color: #456d83;
     text-align: center;
     float: left;
-}
-
-.section-subtitle {
-    width: 65%;
-    padding-right: 2em;
 }
 
 .section-content__placeholder::before {
@@ -214,14 +223,16 @@ nav.vertical {
     font-size: 2em;
 }
 
-.section-1 .section-subtitle__content {
+.section .section-subtitle__content {
     color: #bce1ff;
     font-family: 'Beon Medium', sans-serif;
     text-align: right;
     letter-spacing: 0.5px;
 }
-.section-2 .section-subtitle {
-    width: 100%;
+
+.section-1 .section-subtitle {
+    width: 65%;
+    padding-right: 2em;
 }
 
 .section-2 .section-subtitle__content {
@@ -240,17 +251,24 @@ nav.vertical {
     margin-top: 2em;
 }
 
-.section-3 .section-content__placeholder {
-    width: 100%;
+.section-2 .col-md-4.image-holder {
+    padding: 0;
 }
 
 .section-3 .col-md-4 {
     margin-top: 1.5em;
 }
 
+.section-3 .col-md-6:first-child {
+    float: right;
+}
+
 .section-3 .section-subtitle {
-    width: 100%;
     padding: 0;
+}
+
+.section-3 .small-text {
+    float: right;
 }
 
 /********/
