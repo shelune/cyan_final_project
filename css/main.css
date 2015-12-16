@@ -177,12 +177,9 @@ ul {
     background: #000;
     clear: both;
     width: 100%;
+    padding-top: 6em;
 }
 
-.section {
-    margin: 6em 0 9em 0;
-    clear: both;
-}
 
 /********/
 
@@ -297,7 +294,7 @@ ul {
     text-align: center;
     font-family: 'Beon Medium', sans-serif;
     display: block;
-    margin-top: 3em;
+    margin-top: 1.5em;
 }
 
 .section-4 .section-content {
