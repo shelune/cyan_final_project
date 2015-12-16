@@ -51,6 +51,7 @@ a:hover {
 
 ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .container-fluid {
@@ -59,6 +60,11 @@ ul {
 
 .row {
     margin: 0;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 /* */
@@ -226,7 +232,6 @@ nav.vertical {
 .section .section-subtitle__content {
     color: #bce1ff;
     font-family: 'Beon Medium', sans-serif;
-    text-align: right;
     letter-spacing: 0.5px;
 }
 
@@ -260,16 +265,70 @@ nav.vertical {
 }
 
 .section-3 .col-md-6:first-child {
-    float: right;
+    float: right;;
 }
 
 .section-3 .section-subtitle {
     padding: 0;
 }
 
+.section-3 .section-content {
+    padding: 0;
+    margin-top: 1em;
+}
+
+.section-3 .section-subtitle__content {
+    text-align: right;
+}
+
 .section-3 .small-text {
     float: right;
 }
+
+.section-4 .section-title--small {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Beon Medium', sans-serif;
+    display: block;
+    margin-top: 3em;
+}
+
+.section-4 .section-content {
+    justify-content: center;
+}
+
+.section-5 .section-title {
+    margin-bottom: 0.5em;
+}
+
+.section-5 .section-subtitle--alt {
+    color: rgb(214, 4, 105);
+    text-shadow: 0 0 4px rgb(237, 42, 101), 0 0 6px rgba(237, 42, 101, 0.7), 0 0 8px rgba(237, 42, 101, 0.35);
+    font-size: 1.5em;
+    width: 80%;
+    text-align: right;
+    float: right;
+}
+
+.section-6 .section-content {
+    font-family: 'Beon Medium', sans-serif;
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+.section-6 .social-media li {
+    margin-right: 1em ;
+}
+
+.social-media ~ p {
+    font-size: 0.75em;
+    color: rgb(214, 4, 105);
+    text-shadow: 0 0 4px rgb(237, 42, 101), 0 0 6px rgba(237, 42, 101, 0.7), 0 0 8px rgba(237, 42, 101, 0.35);
+    margin-bottom: 0;
+}
+
+
+
 
 /********/
 
@@ -294,6 +353,38 @@ nav.vertical {
 span.small-text {
     font-family: 'Beon Medium', sans-serif;
     color: #bce1ff;
+}
+
+.food-showcase {
+    margin: 1em 40px;
+    position: relative;
+}
+
+.food-showcase::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3em;
+    background: rgba(0, 0, 0, 0.95);
+    bottom: 0;
+}
+
+.food-showcase img {
+   max-width: 220px;
+}
+
+.food-showcase figcaption {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-family: 'Beon Medium', sans-serif;
+    color: #00F6FF;
+}
+
+.food-showcase h3 {
+    text-align: center;
+    font-size: 1.4em;
 }
 
 /********/
