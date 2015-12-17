@@ -485,10 +485,21 @@ span.small-text {
 *
 */
 
+.sub-page__content {
+    padding-bottom: 25vh;
+}
+
 .sub-page__content .section-title {
     display: block;
     text-align: right;
 }
+
+.sub-page__content figcaption h3 {
+    font-family: 'VNF Gotham', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
 
 /********/
 
