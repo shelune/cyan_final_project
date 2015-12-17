@@ -178,6 +178,8 @@ ul {
     clear: both;
     width: 100%;
     padding-top: 6em;
+    position: relative;
+    background:url('../img/bg-brick.jpg');
 }
 
 
@@ -264,6 +266,10 @@ ul {
     padding: 0;
 }
 
+.section-2 .small-text {
+    float: left;
+}
+
 .section-3 .col-md-4 {
     margin-top: 1.5em;
 }
@@ -307,31 +313,13 @@ ul {
 
 .section-5 .section-subtitle--alt {
     color: rgb(214, 4, 105);
-    text-shadow: 0 0 4px rgb(237, 42, 101), 0 0 6px rgba(237, 42, 101, 0.7), 0 0 8px rgba(237, 42, 101, 0.35);
     font-size: 1.5em;
     width: 80%;
     text-align: right;
     float: right;
+    font-family: 'VNF Gotham', sans-serif;
+    text-transform: uppercase;
 }
-
-.section-6 .section-content {
-    font-family: 'Beon Medium', sans-serif;
-    font-size: 2em;
-    margin-top: 1em;
-}
-
-.section-6 .social-media li {
-    margin-right: 1em ;
-}
-
-.social-media ~ p {
-    font-size: 0.75em;
-    color: rgb(214, 4, 105);
-    text-shadow: 0 0 4px rgb(237, 42, 101), 0 0 6px rgba(237, 42, 101, 0.7), 0 0 8px rgba(237, 42, 101, 0.35);
-    margin-bottom: 0;
-}
-
-
 
 
 /********/
@@ -348,25 +336,28 @@ ul {
     text-align: center;
 }
 
-.main-footer .section-title {
-    font-size: 3em; 
+.section-6 {
+    padding: 4em 0 0.5em 0;
 }
 
-.contact-info, .social-sites {
+.contact-info, .social-media {
     display: flex;
     flex-flow: row wrap;
     font-family: 'Beon Medium', sans-serif;
     color: #fdaebd;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 1.25em;
 }
 
-.social-sites a {
+.social-media a {
+    margin-right: 2em;
     font-size: 2em;
+    color: rgb(188, 255, 255);
 }
 
-.contact-info h4 {
-    font-size: 1em;
+.contact-info li {
+    font-size: 1.2em;
+    margin-right: 2em;
 }
 
 .contact-info em {
