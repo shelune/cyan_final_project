@@ -67,7 +67,31 @@ ul {
     flex-flow: row wrap;
 }
 
-/* */
+/*
+*
+* HEADER (SUB PAGE)
+*
+*/
+
+.main-header {
+    width: 100%;
+    background: url("../img/bg-brick.jpg");
+    height: 180px;
+}
+
+.main-header .section {
+    padding: 0;
+}
+
+.main-header__logo {
+   text-align: center;
+}
+
+/*
+*
+* JUMBOTRON
+*
+*/
 
 .jumbotron {
     height: 100vh;
@@ -389,12 +413,12 @@ span.small-text {
     color: #bce1ff;
 }
 
-.food-showcase {
+.item-showcase {
     margin: 1em 40px;
     position: relative;
 }
 
-.food-showcase::after {
+.item-showcase::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -403,11 +427,11 @@ span.small-text {
     bottom: 0;
 }
 
-.food-showcase img {
+.item-showcase img {
    max-width: 220px;
 }
 
-.food-showcase figcaption {
+.item-showcase figcaption {
     z-index: 2;
     position: absolute;
     width: 100%;
@@ -416,7 +440,7 @@ span.small-text {
     color: #00F6FF;
 }
 
-.food-showcase h3 {
+.item-showcase h3 {
     text-align: center;
     font-size: 1.4em;
 }
@@ -453,6 +477,17 @@ span.small-text {
 
 .arrow-down:hover, .arrow-up:hover {
     background: url(../img/arrow-glow.png) no-repeat;
+}
+
+/*
+*
+* SUBPAGE
+*
+*/
+
+.sub-page__content .section-title {
+    display: block;
+    text-align: right;
 }
 
 /********/
