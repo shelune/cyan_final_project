@@ -67,6 +67,11 @@ ul {
     flex-flow: row wrap;
 }
 
+.section-content__image img {
+    width: 100%;
+    object-fit: cover;
+}
+
 /*
 *
 * HEADER (SUB PAGE)
@@ -229,7 +234,7 @@ ul {
     margin-top: 4em;
 }
 
-.section-subtitle {
+.section .section-subtitle {
     width: 100%;
 }
 
@@ -263,6 +268,7 @@ ul {
     color: #bce1ff;
     font-family: 'VNF Gotham', sans-serif;
     letter-spacing: 0.5px;
+    /* max-width: 90vw; */
 }
 
 .section-1 .section-subtitle {
@@ -272,6 +278,11 @@ ul {
 .section-1 .section-subtitle__content {
     text-align: right;
     font-size: 1.1em;
+}
+
+.section-1__slide img {
+    min-width: 320px;
+    width: 90%;
 }
 
 .section-2 .section-subtitle__content {
@@ -322,6 +333,7 @@ ul {
 
 .section-3 .small-text {
     float: right;
+    margin: 1em;
 }
 
 .section-4 .section-title--small {
@@ -340,17 +352,118 @@ ul {
     margin-bottom: 0.5em;
 }
 
+.section-5 .section-subtitle__content {
+    margin-bottom: 1em;
+}
+
 .section-5 .section-subtitle--alt {
     color: rgb(215, 66, 135);
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3), 0px 0px 3px rgba(255, 0, 66, 0.75), 0px 0px 5px rgba(255, 0, 66, 0.9);
     font-size: 1.5em;
     width: 80%;
+    max-width: 90vw;
     text-align: right;
     float: right;
     font-family: 'VNF Gotham', sans-serif;
     text-transform: uppercase;
 }
 
+/*
+*
+* SUBPAGE
+*
+*/
+
+.sub-page__content {
+    padding-bottom: 25vh;
+}
+
+.sub-page__content .section-title {
+    display: block;
+    text-align: right;
+}
+
+.sub-page__content figcaption h3 {
+    font-family: 'VNF Gotham', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+/*
+*
+* SUBITEM
+*
+*/
+
+.sub-item__content .section-title {
+    text-align: left;
+    margin-top: 0;
+}
+
+.sub-item__content .section-title--detail {
+    font-family: 'Beon Medium', sans-serif;
+    font-size: 2.5em;
+    display: block;
+    text-transform: uppercase;
+}
+
+.sub-item__content .section-content__text {
+    float: left;
+    margin-right: 2em;
+    font-family: 'VNF Gotham', sans-serif;
+    letter-spacing: 0.25px;
+}
+
+.text--artist {
+    width: 35%;
+}
+
+.sub-item__content .section-content__title {
+    text-transform: uppercase;
+    font-family: 'Beon Medium', sans-serif;
+    color: rgb(188, 255, 255);
+    text-shadow: 0px 0px 7px rgba(96, 0, 255, 0.6), -1px -1px 7px rgba(96, 0, 255, 0.6);
+}
+
+.artist-info p, .event-info p {
+    font-size: 1em;
+    margin-bottom: 0;
+    color: rgb(188, 255, 255);
+}
+
+.event-info {
+    margin-top: 0.5em;
+}
+
+.banner {
+    
+}
+
+.banner img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text--event .section-content__title {
+    margin-top: 2em;
+}
+
+.section-content__video {
+    position: relative;
+    padding-bottom: 31.75%;
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+}
+
+.section-content__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
 
 /********/
 
@@ -439,6 +552,7 @@ span.highlight {
     height: 3em;
     background: rgba(0, 0, 0, 0.95);
     bottom: 0;
+    left: 0;
 }
 
 .item-showcase img {
@@ -472,8 +586,8 @@ span.highlight {
 
 .slider-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(25%);
+    top: 25%;
+    transform: translateY(-25%);
     right: 0;
 }
 
@@ -495,28 +609,6 @@ span.highlight {
 .arrow-down:hover, .arrow-up:hover {
     background: url(../img/arrow-glow.png) no-repeat;
 }
-
-/*
-*
-* SUBPAGE
-*
-*/
-
-.sub-page__content {
-    padding-bottom: 25vh;
-}
-
-.sub-page__content .section-title {
-    display: block;
-    text-align: right;
-}
-
-.sub-page__content figcaption h3 {
-    font-family: 'VNF Gotham', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.1em;
-}
-
 
 /********/
 
@@ -548,7 +640,7 @@ span.highlight {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .section-title {
         font-size: 5em;
         display: block;
@@ -556,12 +648,100 @@ span.highlight {
         text-align: center;
     }
 
-    .section-subtitle {
+    .section-1 .section-subtitle {
         width: 100%;
+    }
+
+    .section-1 .section-subtitle__content {
+        text-align: center;
     }
 
     .section-subtitle__content {
         text-align: center;
     }
 
+    .item-showcase img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .section-content__image {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .col-md-9 {
+        text-align: center;
+        padding: 0;
+    }
+
+    .main__hero {
+        max-width: 90vw;
+        height: auto;
+    }
+
+    .section-title {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .item-showcase {
+        margin: 0.5em 0;
+    }
+
+    .item-showcase img {
+        max-width: 90vw;
+        height: 150px;
+    }
+
+    .slider-arrow {
+        position: relative;
+    }
+
+    .section-content__image img {
+        min-height: 150px;
+        max-width: 90vw;
+    }
+
+    .link--block {
+        display: block;
+        float: none;
+    }
+
+    .section-subtitle__content {
+        max-width: 90vw;
+    }
+
+    .section span.small-text {
+        float: none;
+    }
+
+    .section-5 .section-subtitle--alt {
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    .main-header__logo {
+        display: none;
+    }
+
+    .sub-item__content .section-title {
+        text-align: center;
+    }
+
+    .sub-item__content .section-content__text {
+        margin: 0;
+    }
+
+    .sub-item__content {
+        max-width: 100vw;
+    }
+
+    .banner img {
+        width: 100vw;
+        height: 150px;
+    }
 }
