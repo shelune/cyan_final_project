@@ -442,6 +442,10 @@ ul {
     font-size: 1.25em;
 }
 
+.artist-info--song-list li {
+    text-transform: capitalize;
+}
+
 .event-info {
     margin-top: 0.5em;
 }
