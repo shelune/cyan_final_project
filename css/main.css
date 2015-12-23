@@ -72,6 +72,10 @@ ul {
     object-fit: cover;
 }
 
+.main-header .img-responsive {
+    margin: 0 auto;
+}
+
 /*
 *
 * HEADER (SUB PAGE)
@@ -737,10 +741,6 @@ span.highlight {
         width: 100%;
         text-align: center;
         float: none;
-    }
-
-    .main-header__logo {
-        display: none;
     }
 
     .sub-item__content .section-title {
