@@ -49,6 +49,11 @@ a:hover {
     text-decoration: none;
 }
 
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
@@ -343,6 +348,7 @@ ul {
 
 .section-2 .small-text {
     float: left;
+    margin: 1em 0 0 20px;
 }
 
 .section-3 .col-md-4 {
@@ -385,6 +391,10 @@ ul {
 
 .section-4 .section-content {
     justify-content: center;
+}
+
+.section-5 {
+    padding-bottom: 4em;
 }
 
 .section-5 .section-title {
@@ -795,6 +805,7 @@ span.input {
     margin: 0 1em;
     font-size: 2em;
     color: #00F6FF;
+    text-shadow: 0px 0px 7px rgba(96, 0, 255, 0.6), -1px -1px 7px rgba(96, 0, 255, 0.6)
 }
 
 .contact-info li {
@@ -832,6 +843,44 @@ span.small-text {
     font-family: 'Beon Medium', sans-serif;
     color: #1196ff;
     text-shadow: 0px 0px 4px rgba(96, 0, 255, 0.6), -1px -1px 4px rgba(96, 0, 255, 0.6);
+    font-style: 1.1em;
+    position: relative;
+    transition: text-shadow 0.25s ease;
+}
+
+span.small-text::after, span.small-text::before {
+    position: absolute;
+    content: '';
+    margin: 0 auto;
+    height: 100%;
+    width: 20px;
+    background-image: url(../img/arrow-glow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    transform: translateY(25%);
+    transition: transform 0.3s ease;
+}
+
+span.small-text::after {
+    transform: rotate(90deg);
+}
+
+span.small-text::before {
+    transform: rotate(-90deg);
+    left: -20px;
+}
+
+span.small-text:hover::after {
+    transform: rotate(270deg);
+}
+
+span.small-text:hover::before {
+    transform: rotate(-270deg);
+}
+
+span.small-text:hover {
+    text-shadow: 0px 0px 4px rgba(96, 0, 255, 0.95), -1px -1px 4px rgba(96, 0, 255, 0.95);
 }
 
 span.highlight {
@@ -939,6 +988,40 @@ span.highlight {
 
 /* MEDIA QUERIES */
 
+@media only screen and (max-width: 990px) {
+    .nav--vertical {
+        display: none;
+    }
+
+    .nav--horizontal {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .nav-bar--alt {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        background: #000;
+    }
+
+    .nav-bar--alt i {
+        color: rgb(215, 66, 135);
+        font-size: 1.5em;
+        transition: text-shadow 0.25s ease;
+        padding: 1em 0;
+        outline: none;
+    }
+
+    .nav-bar--alt i:hover {
+        text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3), 0px 0px 3px rgba(255, 0, 66, 0.75), 0px 0px 5px rgba(255, 0, 66, 0.9);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .section-title {
         font-size: 5em;
@@ -970,10 +1053,6 @@ span.highlight {
 }
 
 @media only screen and (max-width: 400px) {
-    .nav--vertical {
-        display: none;
-    }
-
     .col-md-9 {
         text-align: center;
         padding: 0;
@@ -1051,34 +1130,6 @@ span.highlight {
     .banner img {
         width: 100vw;
         height: 150px;
-    }
-
-    .nav--horizontal {
-        display: block;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
-    }
-
-    .nav-bar--alt {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        background: #000;
-    }
-
-    .nav-bar--alt i {
-        color: rgb(215, 66, 135);
-        font-size: 1.5em;
-        transition: text-shadow 0.25s ease;
-        padding: 1em 0;
-        outline: none;
-    }
-
-    .nav-bar--alt i:hover {
-        text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3), 0px 0px 3px rgba(255, 0, 66, 0.75), 0px 0px 5px rgba(255, 0, 66, 0.9);
     }
     
     .social-media a {
