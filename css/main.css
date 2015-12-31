@@ -125,6 +125,7 @@ ul {
     bottom: 70px;
     left: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .main__explore p {
@@ -463,6 +464,180 @@ ul {
 
 /*
 *
+* modal-box BOX
+*
+*/
+
+.modal-box-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    opacity: 0;
+    background: rgba(22, 22, 22, 0.5);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.show ~ .modal-box-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 30em;
+    min-width: 20em;
+    height: auto;
+    z-index: 99;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+}
+
+.modal-box--flip {
+    perspecttive: 1200px;
+}
+
+.modal-box--flip .modal-box-content {
+    transform-style: preserve-3d;
+    transform: rotateY(-70deg);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.show.modal-box--flip .modal-box-content {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.modal-box-content {
+    color: #fff;
+    background: #000;
+    margin: 0 auto;
+    position: relative;
+}
+
+.modal-box-content h3 {
+    margin: 0;
+    padding: 0.5em;
+    background: #1169ff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: 'Beon Medium', sans-serif;
+}
+
+.form--reserve {
+    position: relative;
+    padding: 1em 2em;
+    margin: 0;
+    text-align: center;
+    font-family: 'VNF Gotham', sans-serif;
+}
+
+.modal-box-content input {
+    margin-bottom: 1em;
+    padding: 1em;
+    outline: none;
+    text-decoration: none;
+    line-height: 1.5em;
+    width: 15em;
+}
+
+.submit-button {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    position: relative;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    color: currentColor;
+    background: #1169ff;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    transition: background 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: #1196FF;
+}
+
+.show {
+    visibility: visible;
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    background: #1169ff;
+    width: 60px;
+    height: 60px;
+    margin-right: -30px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 2.5em;
+    transition: all 0.2s ease;
+}
+
+.close-button:hover {
+    background: #1196FF;
+}
+
+.close-button span {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.2s ease;
+}
+
+span.input {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.input-field {
+    position: relative;
+    display: block;
+    float: right;
+    border: none;
+
+}
+
+.input-field--chisato {
+    width: 100%;
+    border: 2px solid #1169ff;
+    transition: border-color 0.3s ease;
+    background: transparent;
+}
+
+.input-field--chisato:focus {
+    border-color: #1169ff;
+    outline: medium none;
+}
+
+.input-label--chisato {
+    display: none;
+}
+
+/*
+*
 * SUBPAGE
 *
 */
@@ -624,7 +799,7 @@ ul {
 
 .contact-info li {
     font-size: 1.2em;
-    margin-right: 0 1em;
+    margin: 0 1em;
     color: rgb(215, 66, 135);
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3), 0px 0px 3px rgba(255, 0, 66, 0.75), 0px 0px 5px rgba(255, 0, 66, 0.9);
 }

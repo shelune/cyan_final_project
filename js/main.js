@@ -62,6 +62,24 @@ $(document).ready(function () {
         }, 500);
         return false;
     });
+
+    $('.main__explore').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#section-1').offset().top
+        }, 300);
+        return false;
+    });
+
+    $('.function-button__reserve').click(function() {
+        $('.show').removeClass('show');
+        $('[data-form="reserve"]').addClass('show');
+    });
+
+    $('.close-button').click(function() {
+        $('.show').removeClass('show');
+    });
+
+    $('#date-picker').datepicker();
 });
 
 

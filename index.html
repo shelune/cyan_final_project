@@ -9,7 +9,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -24,13 +25,14 @@
         <![endif]-->
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+
+
     <div class="jumbotron">
       <div class="container main">
         <div class="main__hero"></div>
 
         <div class="main__explore">
             <p>explore</p>
-            <!-- <i class="fa fa-chevron-down"></i> -->
             <!-- <img src="img/arrow.png" alt=""> -->
         </div>
       </div>
@@ -58,34 +60,51 @@
         </nav>
     </div>
 
-    <div class="container-fluid clearfix">
-
-        <div class="modal modal--flip" aria-labelledby="modal-reserve" data-form="reserve">
-            <div class="modal-content" role="document" tabindex="-1">
+        <div class="modal-box modal-box--flip" aria-labelledby="modal-box-reserve" data-form="reserve">
+            <div class="modal-box-content" role="document" tabindex="-1">
                 <h3>- Reserve -</h3>
                 <form action="" class="form--reserve" >
-                    <!-- <label for="username">Username</label> -->
+                    <!-- label for name -->
                     <br>
                     <span class="input input--chisato">
                         <input class="input-field input-field--chisato" type="text" id="username" placeholder="Username" required>
                         <label for="username" class="input-label input-label--chisato">
-                            <span class="input-label__content input-label__content--chisato" data-content="Username">Username</span>
+                            <span class="input-label__content input-label__content--chisato" data-content="Username">Name</span>
                         </label>
                     </span>
                     <br>
-                    <!-- <label for="password">Password</label> -->
+                    <!-- label for phone number -->
                     <span class="input input--chisato">
-                        <input class="input-field input-field--chisato" type="password" id="password" placeholder="Password" required>
+                        <input class="input-field input-field--chisato" type="text" id="password" placeholder="Phone Number" required>
                         <label for="username" class="input-label input-label--chisato">
-                            <span class="input-label__content input-label__content--chisato" data-content="Password">Password</span>
+                            <span class="input-label__content input-label__content--chisato" data-content="Password">Phone</span>
                         </label>
                     </span>
                     <br>
-                    <span><input class="submit-button" type="submit" value="Log In" id="submit-login"></span>
+                    <!-- label for email -->
+                    <span class="input input--chisato">
+                        <input class="input-field input-field--chisato" type="text" id="email" placeholder="Email" required>
+                        <label for="username" class="input-label input-label--chisato">
+                            <span class="input-label__content input-label__content--chisato" data-content="Email">Email</span>
+                        </label>
+                    </span>
+                    <br>
+                    <span class="input input--chisato">
+                        <input class="input-field input-field--chisato" type="text" id="date-picker" placeholder="Date" required>
+                        <label for="username" class="input-label input-label--chisato">
+                            <span class="input-label__content input-label__content--chisato" data-content="Date">Date</span>
+                        </label>
+                    </span>
+                    <br>
+                    <span><input class="submit-button" type="submit" value="Reserve" id="submit-login"></span>
                 </form>
-                <button class="close-button" id="modal-close" aria-label="close"><span>×</span></button>
+                <button class="close-button" id="modal-box-close" aria-label="close"><span>×</span></button>
             </div>
         </div>
+
+    <div class="modal-box-overlay"></div>
+
+    <div class="container-fluid clearfix">
 
       <!-- Example row of columns -->
       <div class="row section section-1" id="section-1">
@@ -93,29 +112,21 @@
           <h2 class="section-title fl-right">About</h2>
           <div class="section-subtitle">
               <p class="section-subtitle__content">3R BAR & LOUNGE LÀ GÌ? <br>CHÚNG TÔI LÀ SÂN CHƠI DÀNH CHO NHỮNG NGƯỜI YÊU ÂM NHẠC 
-<br>KHÔNG PHÂN BIỆT TUỔI TÁC, NGHỀ NGHIỆP, GIỚI TÍNH <br>
-CHỈ CẦN BẠN MÊ NHẠC, 3R CHÍNH LÀ NƠI DÀNH CHO BẠN</p>
+                <br>KHÔNG PHÂN BIỆT TUỔI TÁC, NGHỀ NGHIỆP, GIỚI TÍNH <br>
+                CHỈ CẦN BẠN MÊ NHẠC, 3R CHÍNH LÀ NƠI DÀNH CHO BẠN
+              </p>
           </div>
           <div class="section-content">
               <figure class="section-content__image section-1__slide">
                 <div class="slider">
                   <div>
-                    <img src="http://i.imgur.com/CwrWeEM.jpg"/>
+                    <img src="http://i.imgur.com/0z7COjp.jpg"/>
                   </div>
                   <div>
-                   <img src="http://i.imgur.com/53bGUmU.jpg"/>
+                   <img src="http://i.imgur.com/e7fJLvN.jpg"/>
                   </div>
                   <div>
-                    <img src="http://i.imgur.com/nW71vJm.jpg"/>
-                  </div>
-                  <div>
-                    <img src="http://i.imgur.com/D8SVPyh.jpg"/>
-                  </div>
-                  <div>
-                    <img src="http://i.imgur.com/uAQpkHu.jpg"/>
-                  </div>
-                  <div>
-                    <img src="http://i.imgur.com/nyTSujh.jpg"/>
+                    <img src="http://i.imgur.com/mwBViwO.jpg"/>
                   </div>
                 </div>
                 <figcaption class="slider-arrow">
@@ -254,8 +265,9 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row section section-5" id="section-5">
+      <div class="row section section-5" id="section-5">
           <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-2">
             <h2 class="section-title">Reserve</h2>
             <!--
@@ -263,10 +275,9 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
               <p>Bạn có thể tổ chức tiệc hoặc sinh nhật theo phong cách cực độc và cá tính tại 3R!</p>
               <p>Liên hệ email 3r.barnlounge@gmail.com để biết thêm thông tin chi tiết. <br>Hoặc gọi đến số 203-495-8924.</p>
             </div> -->
-            <button class="function-button button--alt"><span>Đặt Chỗ</span></button>
+            <button class="function-button function-button__reserve"><span>Đặt Chỗ</span></button>
           </div>
         </div>
-      </div>
       <footer>
         <div class="row section section-6" id="section-6">
               <ul class="social-media flexbox">
@@ -282,8 +293,12 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
               </ul>
           </div>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </div> <!-- /container -->        
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
