@@ -37,20 +37,58 @@
 
         <nav class="nav--vertical">
             <ul class="nav-bar">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Artists</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Food'n Drink</a></li>
-                <li><a href="#">Reserve</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#section-1">About</a></li>
+                <li><a href="#section-2">Artists</a></li>
+                <li><a href="#section-3">Events</a></li>
+                <li><a href="#section-4">Food'n Drink</a></li>
+                <li><a href="#section-5">Reserve</a></li>
+                <li><a href="#section-6">Contact</a></li>
             </ul>
+        </nav>
+
+        <nav class="nav--horizontal">
+          <ul class="nav-bar--alt">
+              <li><a href="#section-1"><i class="fa fa-home"></i></a></li>
+              <li><a href="#section-2"><i class="fa fa-music"></i></a></li>
+              <li><a href="#section-3"><i class="fa fa-magic"></i></a></li>
+              <li><a href="#section-4"><i class="fa fa-glass"></i></a></li>
+              <li><a href="#section-5"><i class="fa fa-check-square-o"></i></a></li>
+              <li><a href="#section-6"><i class="fa fa-user"></i></a></li>
+          </ul>
         </nav>
     </div>
 
     <div class="container-fluid clearfix">
 
+        <div class="modal modal--flip" aria-labelledby="modal-reserve" data-form="reserve">
+            <div class="modal-content" role="document" tabindex="-1">
+                <h3>- Reserve -</h3>
+                <form action="" class="form--reserve" >
+                    <!-- <label for="username">Username</label> -->
+                    <br>
+                    <span class="input input--chisato">
+                        <input class="input-field input-field--chisato" type="text" id="username" placeholder="Username" required>
+                        <label for="username" class="input-label input-label--chisato">
+                            <span class="input-label__content input-label__content--chisato" data-content="Username">Username</span>
+                        </label>
+                    </span>
+                    <br>
+                    <!-- <label for="password">Password</label> -->
+                    <span class="input input--chisato">
+                        <input class="input-field input-field--chisato" type="password" id="password" placeholder="Password" required>
+                        <label for="username" class="input-label input-label--chisato">
+                            <span class="input-label__content input-label__content--chisato" data-content="Password">Password</span>
+                        </label>
+                    </span>
+                    <br>
+                    <span><input class="submit-button" type="submit" value="Log In" id="submit-login"></span>
+                </form>
+                <button class="close-button" id="modal-close" aria-label="close"><span>×</span></button>
+            </div>
+        </div>
+
       <!-- Example row of columns -->
-      <div class="row section section-1">
+      <div class="row section section-1" id="section-1">
         <div class="col-md-9 col-xs-12 col-sm-12 col-md-offset-2">
           <h2 class="section-title fl-right">About</h2>
           <div class="section-subtitle">
@@ -60,7 +98,26 @@ CHỈ CẦN BẠN MÊ NHẠC, 3R CHÍNH LÀ NƠI DÀNH CHO BẠN</p>
           </div>
           <div class="section-content">
               <figure class="section-content__image section-1__slide">
-                <img src="http://placehold.it/880x195" alt="">
+                <div class="slider">
+                  <div>
+                    <img src="http://i.imgur.com/CwrWeEM.jpg"/>
+                  </div>
+                  <div>
+                   <img src="http://i.imgur.com/53bGUmU.jpg"/>
+                  </div>
+                  <div>
+                    <img src="http://i.imgur.com/nW71vJm.jpg"/>
+                  </div>
+                  <div>
+                    <img src="http://i.imgur.com/D8SVPyh.jpg"/>
+                  </div>
+                  <div>
+                    <img src="http://i.imgur.com/uAQpkHu.jpg"/>
+                  </div>
+                  <div>
+                    <img src="http://i.imgur.com/nyTSujh.jpg"/>
+                  </div>
+                </div>
                 <figcaption class="slider-arrow">
                   <div class="arrow-up"></div>
                   <div class="arrow-down"></div>
@@ -71,7 +128,7 @@ CHỈ CẦN BẠN MÊ NHẠC, 3R CHÍNH LÀ NƠI DÀNH CHO BẠN</p>
       </div>
 
       <!-- .container-fluid.section-2>.row>col-md-8.col-sm-12.col-xs-12.col-md-offset-2 -->
-        <div class="row section section-2">
+        <div class="row section section-2" id="section-2">
             <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-2">
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <h2 class="section-title fl-left">Artists</h2>
@@ -81,20 +138,13 @@ CHỈ CẦN BẠN MÊ NHẠC, 3R CHÍNH LÀ NƠI DÀNH CHO BẠN</p>
 Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highlight">một tuần lễ</span> chỉ dành cho <span class="highlight">một loại nhạc</span> như Pop, Rock hay là cả Nhạc vàng. Chắc chắn là những nghệ sĩ của chúng tôi sẽ không khiến bạn phải thất vọng.</p>
                     </div>
                     
-                    <a href="#" class="link--block"><span class="small-text">See more</span></a>
+                    <a href="page2.html" class="link--block"><span class="small-text">See more</span></a>
                 </div>
 
-                <div class="col-md-4 col-sm-12 col-xs-12 image-holder">
+                <div class="col-md-8 col-sm-12 col-xs-12 image-holder">
                   <div class="section-content clearfix">
                     <figure class="section-content__image section-2__slide">
-                      <img src="http://placehold.it/328x458" alt="">
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 image-holder">
-                  <div class="section-content clearfix">
-                    <figure class="section-content__image section-2__slide">
-                      <img src="http://placehold.it/328x458" alt="">
+                      <img src="http://i.imgur.com/fjuccqz.jpg" alt="">
                     </figure>
                   </div>
                 </div>
@@ -102,7 +152,7 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
             </div>
         </div>
 
-          <div class="row section section-3">
+          <div class="row section section-3" id="section-3">
               <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-2">
                   <div class="col-md-6 col-sm-12 col-xs-12">
                       <h2 class="section-title fl-right">Events</h2>
@@ -112,53 +162,52 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
                   </div>
                   <div class="col-md-6 col-sm-12 col-xs-12">
                       <figure class="section-content__image section-3__slide">
-                      <img src="http://placehold.it/830x400" alt="">
+                      <img src="img/event/sakura.jpg" alt="">
                     </figure>
                   </div>
                   <div class="section-content col-md-12 col-sm-12 col-xs-12">
                       <div class="col-md-4">
                           <figure class="section-content__image section-3__slide--small">
-                            <img src="http://placehold.it/600x400" alt="">
+                            <img src="img/event/chocolate.jpg" alt="">
                           </figure>
                       </div>
                       <div class="col-md-4">
                           <figure class="section-content__image section-3__slide--small">
-                            <img src="http://placehold.it/600x400" alt="">
+                            <img src="img/event/koinobori.jpg" alt="">
                           </figure>
                       </div>
                       <div class="col-md-4">
                           <figure class="section-content__image section-3__slide--small">
-                            <img src="http://placehold.it/600x400" alt="">
+                            <img src="img/event/xmas.jpg" alt="">
                           </figure>
                       </div>
                   </div>  
                       
-                      <a href="#" class="link--block"><span class="small-text">See more</span></a>      
+                      <a href="page3.html" class="link--block"><span class="small-text">See more</span></a>      
               </div>
           </div>
       
-      <div class="row section section-4">
+      <div class="row section section-4" id="section-4">
         <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-2">
           <h2 class="section-title">Food 'n Drink</h2>
-          <div class="section-subtitle__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit accusantium dolorem rem accusamus repellat vel voluptatem, inventore non, corporis placeat possimus, et beatae. Hic in neque sed molestiae, provident at.</div>
           <div class="col-md-12 col-sm-12 col-xs-12">
             
             <h3 class="section-title section-title--small">Food</h3>
             <div class="section-content flexbox">
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/tacotaco.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/bwQ0YwN.jpg" alt=""></a>
                 <figcaption>
                   <h3>Special Taco</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/burger.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/EBDnAiT.jpg" alt=""></a>
                 <figcaption>
                   <h3>Beef Burger</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/snacks1.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/kWJ6pOS.jpg" alt=""></a>
                 <figcaption>
                   <h3>Snack</h3>
                 </figcaption>
@@ -167,37 +216,37 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
             <h3 class="section-title section-title--small">Drink</h3>
             <div class="section-content flexbox">
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/tropical-sunshine.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/dzzRDRe.jpg" alt=""></a>
                 <figcaption>
                   <h3>Tropical Sunshine</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/manhattan.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/iVlYLro.jpg" alt=""></a>
                 <figcaption>
                   <h3>Manhattan</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/brooklyn.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/nRsdIPZ.jpg" alt=""></a>
                 <figcaption>
                   <h3>Brooklyn</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/margarita.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/pbEa9st.jpg" alt=""></a>
                 <figcaption>
                   <h3>Margarita</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/irish-coffee.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/lHXr02y.jpg" alt=""></a>
                 <figcaption>
                   <h3>Irish Coffee</h3>
                 </figcaption>
               </figure>
               <figure class="item-showcase">
-                <a href=""><img src="img/menu/jack-rose.jpg" alt=""></a>
+                <a href=""><img src="http://i.imgur.com/Atb9nyh.jpg" alt=""></a>
                 <figcaption>
                   <h3>Jack Rose</h3>
                 </figcaption>
@@ -206,21 +255,20 @@ Tuy nhiên, vào những dịp đặc biệt, sẽ có hẳn <span class="highli
           </div>
         </div>
 
-        <div class="row section section-5">
+        <div class="row section section-5" id="section-5">
           <div class="col-md-9 col-sm-12 col-xs-12 col-md-offset-2">
-            <h2 class="section-title fl-right">Reserve</h2>
+            <h2 class="section-title">Reserve</h2>
+            <!--
             <div class="section-subtitle__content section-subtitle--alt">
               <p>Bạn có thể tổ chức tiệc hoặc sinh nhật theo phong cách cực độc và cá tính tại 3R!</p>
               <p>Liên hệ email 3r.barnlounge@gmail.com để biết thêm thông tin chi tiết. <br>Hoặc gọi đến số 203-495-8924.</p>
-            </div>
+            </div> -->
+            <button class="function-button button--alt"><span>Đặt Chỗ</span></button>
           </div>
         </div>
-
-        
-
       </div>
       <footer>
-        <div class="row section section-6">
+        <div class="row section section-6" id="section-6">
               <ul class="social-media flexbox">
                 <li><a href="">FB</a></li>
                 <li><a href="">TW</a></li>
