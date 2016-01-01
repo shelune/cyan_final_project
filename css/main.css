@@ -101,6 +101,10 @@ ul {
    text-align: center;
 }
 
+.main-header__logo--small {
+    display: none;
+}
+
 /*
 *
 * JUMBOTRON
@@ -657,7 +661,11 @@ span.input {
 */
 
 .sub-page__content {
-    padding-bottom: 25vh;
+    padding-bottom: 4em;
+}
+
+.sub-page__content .section-content {
+    justify-content: center;
 }
 
 .sub-page__content .section-title {
@@ -1026,7 +1034,7 @@ span.highlight {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .section-title {
         font-size: 5em;
         display: block;
@@ -1053,6 +1061,24 @@ span.highlight {
 
     .section-content__image {
         max-width: 700px;
+    }
+
+    /* SUB PAGE */
+
+    .sub-page--events .item-showcase img {
+        max-width: 33vw;
+    }
+
+    .sub-page__content .section-title {
+        text-align: center;
+    }
+
+    .header-content {
+        padding: 0;
+    }
+
+    .main-header__logo img {
+        max-width: 100vw;
     }
 }
 
@@ -1145,4 +1171,28 @@ span.highlight {
     }
 
     /* SUB PAGE */
+
+    .sub-page--events .item-showcase img {
+        max-width: 90vw;
+    }
+
+    .sub-page--events .item-showcase {
+        margin: 1em 0.25em;
+    }
+
+    .sub-page--artist .item-showcase {
+        margin: 0.25em;
+    }
+
+    .sub-page--artist .item-showcase figcaption {
+        font-size: 0.85em;
+    }
+
+    .main-header__logo.main-header__logo--small {
+        display: block;
+    }
+
+    /* SUB ITEM */
+
+
 }
