@@ -37,6 +37,7 @@ $(document).ready(function () {
       cycleItems();
     }, 3000);
 
+    // click arrow up to get next image
     $('.arrow-up').click(function() {
       clearInterval(autoSlide);
       currentIndex += 1;
@@ -46,6 +47,7 @@ $(document).ready(function () {
       cycleItems();
     });
 
+    // click arrow down to get prev image
     $('.arrow-down').click(function() {
       clearInterval(autoSlide);
       currentIndex -= 1;
@@ -70,15 +72,20 @@ $(document).ready(function () {
         return false;
     });
 
+
+    // display reserve box
     $('.function-button__reserve').click(function() {
         $('.show').removeClass('show');
         $('[data-form="reserve"]').addClass('show');
     });
 
+
+    // close reserve box
     $('.close-button').click(function() {
         $('.show').removeClass('show');
     });
 
+    // display date options
     $('#date-picker').datepicker();
 });
 

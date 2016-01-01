@@ -23,12 +23,12 @@ html {
 */
 
 ::-moz-selection {
-    background: #fff4b5;
+    background: #591010;
     text-shadow: none;
 }
 
 ::selection {
-    background: #fff4b5;
+    background: #591010;
     text-shadow: none;
 }
 
