@@ -559,6 +559,11 @@ ul {
     font-family: 'VNF Gotham', sans-serif;
 }
 
+.form--reserve p {
+    font-style: 0.9em;
+    padding: 10px 20px;
+}
+
 .modal-box-content input {
     margin-bottom: 1em;
     padding: 1em;
@@ -627,7 +632,6 @@ span.input {
     display: block;
     float: right;
     border: none;
-
 }
 
 .input-field--chisato {
@@ -999,7 +1003,7 @@ span.highlight {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 10;
     }
 
     .nav-bar--alt {
@@ -1139,4 +1143,6 @@ span.highlight {
     .slider-arrow {
         transform: rotate(90deg) translateX(50%);
     }
+
+    /* SUB PAGE */
 }
