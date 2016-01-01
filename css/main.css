@@ -23,12 +23,12 @@ html {
 */
 
 ::-moz-selection {
-    background: #ffb0aa;
+    background: #fff4b5;
     text-shadow: none;
 }
 
 ::selection {
-    background: #ffb0aa;
+    background: #fff4b5;
     text-shadow: none;
 }
 
@@ -689,6 +689,30 @@ span.input {
 *
 */
 
+.sub-item .nav--vertical {
+    display: none;
+}
+
+.sub-item .link--block {
+    display: block;
+    margin: 1em;
+    font-size: 1.25em;
+}
+
+.sub-item .small-text::after {
+    display: none;
+}
+
+.sub-item .small-text::before {
+    transform: rotate(90deg);
+    left: -30px;
+    transition: all 0.2s cubic-bezier(0.3, 0.7, 0.2, 0.9);
+}
+
+.sub-item .small-text:hover::before {
+    transform: translateX(-10px) rotate(-270deg);
+}
+
 .sub-item__content .section-title {
     text-align: left;
     margin-top: 0;
@@ -817,7 +841,7 @@ span.input {
     margin: 0 1em;
     font-size: 2em;
     color: #00F6FF;
-    text-shadow: 0px 0px 7px rgba(96, 0, 255, 0.6), -1px -1px 7px rgba(96, 0, 255, 0.6)
+    text-shadow: 0px 0px 7px rgba(96, 0, 255, 0.6), -1px -1px 7px rgba(96, 0, 255, 0.6);
 }
 
 .contact-info li {
@@ -1022,7 +1046,7 @@ span.highlight {
     }
 
     .nav-bar--alt i {
-        color: rgb(215, 66, 135);
+        color: #0069ff;
         font-size: 1.5em;
         transition: text-shadow 0.25s ease;
         padding: 1em 0;
@@ -1030,7 +1054,7 @@ span.highlight {
     }
 
     .nav-bar--alt i:hover {
-        text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3), 0px 0px 3px rgba(255, 0, 66, 0.75), 0px 0px 5px rgba(255, 0, 66, 0.9);
+        text-shadow: 0px 0px 7px rgba(96, 0, 255, 0.6), -1px -1px 7px rgba(96, 0, 255, 0.6);
     }
 }
 
